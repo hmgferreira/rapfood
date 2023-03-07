@@ -1,0 +1,18 @@
+{
+  "products": [],
+  "categories": [],
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@admin.com.br",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "name": "Teste",
+      "email": "teste@teste.com.br",
+      "password": "123456"
+    }
+  ]
+}
