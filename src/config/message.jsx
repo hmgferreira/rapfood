@@ -42,6 +42,6 @@ const message = {
 
 // message.success("Login efetuado com sucesso.");
 // message.error("Email ou senha inválido.");
-// message.confirmation("Email ou senha inválido.");
+// message.confirmation("Você deseja deletar?");
 
 export default message;
