@@ -1,5 +1,41 @@
 {
-  "products": [],
+  "products": [
+    {
+      "id": "1",
+      "name": "Pizza de Calabresa",
+      "price": 29.99,
+      "image": "",
+      "amount": 10
+    },
+    {
+      "id": "2",
+      "name": "Pizza de Frango",
+      "price": 29.99,
+      "image": "",
+      "amount": 10
+    },
+    {
+      "name": "4 Queijos",
+      "price": "25",
+      "amount": "10",
+      "description": "teste",
+      "id": "jU7ohR4"
+    },
+    {
+      "name": "Marcio",
+      "price": "1",
+      "amount": "1",
+      "description": "1",
+      "id": "TS5xWrr"
+    },
+    {
+      "name": "MariO",
+      "price": "12",
+      "amount": "12",
+      "description": "ASDA",
+      "id": "kofwEUW"
+    }
+  ],
   "categories": [],
   "users": [
     {

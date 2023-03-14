@@ -22,8 +22,9 @@ const message = {
             text: msg
         });
     },
-    confirmation: (msg) => {
-        Swal.fire({
+    confirmation: async (msg) => {
+        let check = false;
+        await Swal.fire({
             title: 'Atenção',
             text: msg,
             icon: 'warning',
@@ -33,10 +34,9 @@ const message = {
             confirmButtonText: 'Sim',
             cancelButtonText: 'Não'
         }).then((result) => {
-            if (result.isConfirmed) {
-                
-            }
+            check = result.isConfirmed;
         })
+        return check;
     }
 };
 
