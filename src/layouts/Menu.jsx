@@ -22,7 +22,7 @@ function Menu() {
         <>
             <div className="menu" style={styles}>
                 <div className="top-left">
-                    <FaBars size={28} onClick={() => setOpenMenu(true)} />
+                    <FaBars size={28} id="btn-menu" onClick={() => setOpenMenu(true)} />
                 </div>
                 <div className="top-right">
 

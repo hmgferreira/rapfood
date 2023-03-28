@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import AuthContext from "../../contexts/AuthContext";
+
 function Home() {
+    const { user } = useContext(AuthContext);
     return (
         <>
-            Home
+            Seja bem vindo(a) {user}
         </>
     );
 }

@@ -1,14 +1,16 @@
 import { Button, Grid, Table, TableRow, TableCell, TextField } from "@mui/material";
 import { Formik, ErrorMessage } from "formik";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from '../../config/api';
 import message from '../../config/message';
 import * as Yup from 'yup';
+import AuthContext from "../../contexts/AuthContext";
 
 function FormProducts() {
 
     const navigate = useNavigate();
+    
     async function salvar(values) {
         await api.post('products', values);
         message.success("Produto criado com sucesso.");

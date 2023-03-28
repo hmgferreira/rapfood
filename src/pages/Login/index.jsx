@@ -1,18 +1,21 @@
 import { Avatar, Button, Checkbox, FormControlLabel, Grid, stepClasses, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import api from '../../config/api';
 import message from '../../config/message';
+import AuthContext from "../../contexts/AuthContext";
 
 function Login() {
 
     const navigate = useNavigate();
-
+    const { setIsLogged, setUser } = useContext(AuthContext);
+    
     const[login, setLogin] = useState('');
     const[senha, setSenha] = useState('');
     
     async function handleSubmit() {
+        
         const response = await api.get("users", {
             params: {
                 email: login
@@ -22,6 +25,8 @@ function Login() {
         if(data.length > 0) {
             const user = data[0];
             if(user.password === senha) {
+                setIsLogged(true);
+                setUser(user.name);
                 message.success("Login efetuado com sucesso.");
                 navigate('/');
             } else {
