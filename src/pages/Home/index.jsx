@@ -5,7 +5,7 @@ function Home() {
     const { user } = useContext(AuthContext);
     return (
         <>
-            Seja bem vindo(a) {user}
+            Seja bem vindo(a) {user}!
         </>
     );
 }
